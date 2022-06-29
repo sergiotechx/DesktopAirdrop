@@ -28,7 +28,5 @@ namespace Data.Models.Domain
         [BsonElement("ValidTo")]
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime ValidTo { get; set; }
-
-       
     }
 }

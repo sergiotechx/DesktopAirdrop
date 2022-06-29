@@ -52,6 +52,7 @@
             this.pictureBoxLogin.Size = new System.Drawing.Size(116, 70);
             this.pictureBoxLogin.TabIndex = 0;
             this.pictureBoxLogin.TabStop = false;
+            this.pictureBoxLogin.Click += new System.EventHandler(this.pictureBoxLogin_Click);
             // 
             // groupBoxLogin
             // 
@@ -70,6 +71,7 @@
             this.groupBoxLogin.TabIndex = 1;
             this.groupBoxLogin.TabStop = false;
             this.groupBoxLogin.Text = "Login";
+            this.groupBoxLogin.Enter += new System.EventHandler(this.groupBoxLogin_Enter);
             // 
             // labelLicense
             // 
@@ -79,6 +81,7 @@
             this.labelLicense.Size = new System.Drawing.Size(46, 15);
             this.labelLicense.TabIndex = 8;
             this.labelLicense.Text = "License";
+            this.labelLicense.Click += new System.EventHandler(this.labelLicense_Click);
             // 
             // textBoxLicense
             // 
@@ -86,6 +89,7 @@
             this.textBoxLicense.Name = "textBoxLicense";
             this.textBoxLicense.Size = new System.Drawing.Size(214, 23);
             this.textBoxLicense.TabIndex = 7;
+            this.textBoxLicense.TextChanged += new System.EventHandler(this.textBoxLicense_TextChanged);
             // 
             // buttonCancel
             // 
@@ -119,6 +123,7 @@
             this.labelPassword.Size = new System.Drawing.Size(57, 15);
             this.labelPassword.TabIndex = 3;
             this.labelPassword.Text = "Password";
+            this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // labelUser
             // 
@@ -128,6 +133,7 @@
             this.labelUser.Size = new System.Drawing.Size(30, 15);
             this.labelUser.TabIndex = 2;
             this.labelUser.Text = "User";
+            this.labelUser.Click += new System.EventHandler(this.labelUser_Click);
             // 
             // textBoxPassword
             // 
@@ -136,6 +142,7 @@
             this.textBoxPassword.PasswordChar = '֎';
             this.textBoxPassword.Size = new System.Drawing.Size(214, 23);
             this.textBoxPassword.TabIndex = 1;
+            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // textBoxUser
             // 
@@ -143,6 +150,7 @@
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(214, 23);
             this.textBoxUser.TabIndex = 0;
+            this.textBoxUser.TextChanged += new System.EventHandler(this.textBoxUser_TextChanged);
             // 
             // FormLogin
             // 

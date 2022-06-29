@@ -47,10 +47,9 @@ namespace Airdrop
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message , "Authentication failure", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Authentication failure", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Exit();
             }
-           
         }
 
         private async void buttonOK_Click(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace Airdrop
                     localDBLogin.License = mongoResult.License;
                     localDBLogin.ValidTo = mongoResult.ValidTo;
 
-                      
+
                     if (localDBLogin.MachineId == null)
                     {
                         localDBLogin.MachineId = CPU.GetCPU();
@@ -153,6 +152,44 @@ namespace Airdrop
             this.Close();
         }
 
+        private void groupBoxLogin_Enter(object sender, EventArgs e)
+        {
 
+        }
+
+        private void labelLicense_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLicense_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

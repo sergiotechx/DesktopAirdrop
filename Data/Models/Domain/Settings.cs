@@ -21,6 +21,7 @@ namespace Data.Models.Domain
             PrivateKey = String.Empty;
             Contract = String.Empty;
             ConnectionString = String.Empty;
+            ChainId = 0;
         }
     }
 }
