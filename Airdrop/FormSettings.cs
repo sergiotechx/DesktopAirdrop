@@ -124,6 +124,74 @@ namespace Airdrop
             }
         }
 
-     
+        private void textBoxChainId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelChainId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxConnections_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxContract_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrivateKey_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxDisclaimer_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDisclaimer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxDisclaimer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
