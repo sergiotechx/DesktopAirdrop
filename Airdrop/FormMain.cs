@@ -189,7 +189,7 @@ namespace Airdrop
             settings.ConnectionString = AesOperation.DecryptString(key, settings.ConnectionString);
 
 
-            Connection massiveSend = new Connection(settings.ConnectionString, settings.PrivateKey, settings.Contract);
+            Connection massiveSend = new Connection(settings.ConnectionString, settings.PrivateKey, settings.Contract, settings.ChainId);
             foreach (DataGridViewRow item in dataGridView.Rows)
             {
 

@@ -56,6 +56,10 @@ namespace Data.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("char");
 
+                    b.Property<int>("ChainId")
+                        .HasMaxLength(255)
+                        .HasColumnType("int");
+
                     b.Property<string>("ConnectionString")
                         .IsRequired()
                         .HasMaxLength(255)

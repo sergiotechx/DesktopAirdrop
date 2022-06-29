@@ -44,6 +44,7 @@ namespace Data.Data
                 settings.Property(p => p.Address).IsRequired().HasColumnType("char").HasMaxLength(255);
                 settings.Property(p => p.PrivateKey).IsRequired().HasColumnType("char").HasMaxLength(255);
                 settings.Property(p => p.Contract).IsRequired().HasColumnType("char").HasMaxLength(255);
+                settings.Property(p => p.ChainId).IsRequired().HasColumnType("int").HasMaxLength(255);
                 settings.Property(p => p.ConnectionString).IsRequired().HasColumnType("char").HasMaxLength(255);
             });
             modelBuilder.Entity<Login>(settings =>

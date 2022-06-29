@@ -18,9 +18,9 @@ namespace BlockChain
 
 
 
-        public Connection(string _strconnection, string _privatekey, string _contractAdress)
+        public Connection(string _strconnection, string _privatekey, string _contractAdress,int _ChainId)
         {
-            account = new Account(_privatekey);
+            account = new Account(_privatekey, new BigInteger(_ChainId));
             web3 = new Web3(account, _strconnection);
             web3.TransactionManager.UseLegacyAsDefault = true;
             contractAdress = _contractAdress;

@@ -44,6 +44,8 @@
             this.groupBoxDisclaimer = new System.Windows.Forms.GroupBox();
             this.textBoxDisclaimer = new System.Windows.Forms.TextBox();
             this.pictureBoxDisclaimer = new System.Windows.Forms.PictureBox();
+            this.labelChainId = new System.Windows.Forms.Label();
+            this.textBoxChainId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBoxDisclaimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisclaimer)).BeginInit();
@@ -52,6 +54,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Controls.Add(this.textBoxChainId);
+            this.groupBox1.Controls.Add(this.labelChainId);
             this.groupBox1.Controls.Add(this.textBoxAddress);
             this.groupBox1.Controls.Add(this.labelAddress);
             this.groupBox1.Controls.Add(this.label1);
@@ -66,7 +70,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(525, 170);
+            this.groupBox1.Size = new System.Drawing.Size(525, 206);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
@@ -90,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 112);
+            this.label1.Location = new System.Drawing.Point(7, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 15);
             this.label1.TabIndex = 13;
@@ -98,7 +102,7 @@
             // 
             // textBoxConnections
             // 
-            this.textBoxConnections.Location = new System.Drawing.Point(103, 109);
+            this.textBoxConnections.Location = new System.Drawing.Point(101, 135);
             this.textBoxConnections.Name = "textBoxConnections";
             this.textBoxConnections.PasswordChar = '֎';
             this.textBoxConnections.Size = new System.Drawing.Size(399, 23);
@@ -108,7 +112,7 @@
             // 
             this.buttonTest.BackColor = System.Drawing.Color.DimGray;
             this.buttonTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTest.Location = new System.Drawing.Point(103, 138);
+            this.buttonTest.Location = new System.Drawing.Point(103, 166);
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(75, 23);
             this.buttonTest.TabIndex = 4;
@@ -120,7 +124,7 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.DimGray;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(265, 138);
+            this.buttonClose.Location = new System.Drawing.Point(265, 164);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 6;
@@ -132,7 +136,7 @@
             // 
             this.buttonSave.BackColor = System.Drawing.Color.DimGray;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.Location = new System.Drawing.Point(184, 138);
+            this.buttonSave.Location = new System.Drawing.Point(184, 165);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 5;
@@ -178,7 +182,7 @@
             this.groupBoxDisclaimer.Controls.Add(this.textBoxDisclaimer);
             this.groupBoxDisclaimer.Controls.Add(this.pictureBoxDisclaimer);
             this.groupBoxDisclaimer.ForeColor = System.Drawing.Color.White;
-            this.groupBoxDisclaimer.Location = new System.Drawing.Point(13, 188);
+            this.groupBoxDisclaimer.Location = new System.Drawing.Point(13, 224);
             this.groupBoxDisclaimer.Name = "groupBoxDisclaimer";
             this.groupBoxDisclaimer.Size = new System.Drawing.Size(525, 62);
             this.groupBoxDisclaimer.TabIndex = 1;
@@ -209,12 +213,28 @@
             this.pictureBoxDisclaimer.TabIndex = 0;
             this.pictureBoxDisclaimer.TabStop = false;
             // 
+            // labelChainId
+            // 
+            this.labelChainId.AutoSize = true;
+            this.labelChainId.Location = new System.Drawing.Point(7, 115);
+            this.labelChainId.Name = "labelChainId";
+            this.labelChainId.Size = new System.Drawing.Size(51, 15);
+            this.labelChainId.TabIndex = 16;
+            this.labelChainId.Text = "Chain Id";
+            // 
+            // textBoxChainId
+            // 
+            this.textBoxChainId.Location = new System.Drawing.Point(101, 107);
+            this.textBoxChainId.Name = "textBoxChainId";
+            this.textBoxChainId.Size = new System.Drawing.Size(399, 23);
+            this.textBoxChainId.TabIndex = 17;
+            // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(550, 261);
+            this.ClientSize = new System.Drawing.Size(550, 313);
             this.Controls.Add(this.groupBoxDisclaimer);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -249,5 +269,7 @@
         private TextBox textBoxDisclaimer;
         private TextBox textBoxAddress;
         private Label labelAddress;
+        private TextBox textBoxChainId;
+        private Label labelChainId;
     }
 }

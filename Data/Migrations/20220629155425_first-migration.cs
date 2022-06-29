@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Data.Migrations
 {
-    public partial class firstmodel : Migration
+    public partial class firstmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,6 +32,7 @@ namespace Data.Migrations
                     Address = table.Column<string>(type: "char", maxLength: 255, nullable: false),
                     PrivateKey = table.Column<string>(type: "char", maxLength: 255, nullable: false),
                     Contract = table.Column<string>(type: "char", maxLength: 255, nullable: false),
+                    ChainId = table.Column<int>(type: "int", maxLength: 255, nullable: false),
                     ConnectionString = table.Column<string>(type: "char", maxLength: 255, nullable: false)
                 },
                 constraints: table =>

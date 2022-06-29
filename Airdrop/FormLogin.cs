@@ -27,20 +27,30 @@ namespace Airdrop
         }
         private void FormLogin_Load(object sender, EventArgs e)
         {
-      
-            transactionContext = new TransactionContext();
 
-            localDBLogin = transactionContext.Login.FirstOrDefault<Login>();
-            if (localDBLogin == null)
+            try
             {
-                labelLicense.Visible = true;
-                textBoxLicense.Visible = true;
+                transactionContext = new TransactionContext();
+
+                localDBLogin = transactionContext.Login.FirstOrDefault<Login>();
+                if (localDBLogin == null)
+                {
+                    labelLicense.Visible = true;
+                    textBoxLicense.Visible = true;
+                }
+                else
+                {
+                    labelLicense.Visible = false;
+                    textBoxLicense.Visible = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                labelLicense.Visible = false;
-                textBoxLicense.Visible = false;
+
+                MessageBox.Show(ex.Message , "Authentication failure", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Application.Exit();
             }
+           
         }
 
         private async void buttonOK_Click(object sender, EventArgs e)

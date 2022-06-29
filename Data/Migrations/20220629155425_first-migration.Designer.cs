@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(TransactionContext))]
-    [Migration("20220628194605_first-model")]
-    partial class firstmodel
+    [Migration("20220629155425_first-migration")]
+    partial class firstmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,6 +57,10 @@ namespace Data.Migrations
                     b.Property<string>("Address")
                         .HasMaxLength(255)
                         .HasColumnType("char");
+
+                    b.Property<int>("ChainId")
+                        .HasMaxLength(255)
+                        .HasColumnType("int");
 
                     b.Property<string>("ConnectionString")
                         .IsRequired()

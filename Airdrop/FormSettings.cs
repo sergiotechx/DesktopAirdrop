@@ -10,6 +10,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,16 +40,13 @@ namespace Airdrop
         private void FormSettings_Load(object sender, EventArgs e)
         {
             Settings settings = transactionContext.Settings.FirstOrDefault<Settings>();
-           
-
-           
-
             if (settings != null)
             {
                 transactionContext.Entry(settings).State = EntityState.Detached;
                 textBoxAddress.Text = settings.Address;
                 textBoxPrivateKey.Text = AesOperation.DecryptString(key,settings.PrivateKey);
                 textBoxContract.Text = settings.Contract;
+                textBoxChainId.Text = settings.ChainId.ToString();
                 textBoxConnections.Text = AesOperation.DecryptString(key, settings.ConnectionString);
                
                
@@ -62,35 +60,30 @@ namespace Airdrop
         {
             try
             {
-                bool empty = false;
+            
                 Settings settingstemp = transactionContext.Settings.FirstOrDefault<Settings>();
                 if (settingstemp == null)
                 {
                     settingstemp = new Settings();
-                    empty = true;
                 }
                 else
                 {
                     transactionContext.Entry(settingstemp).State = EntityState.Detached;
+                    transactionContext.Settings.Remove(settingstemp);
+                    transactionContext.SaveChanges();
                 }
-
+                             
                 settingstemp.Address = textBoxAddress.Text;
                 settingstemp.PrivateKey = textBoxPrivateKey.Text;
                 settingstemp.Contract = textBoxContract.Text;
                 settingstemp.ConnectionString = textBoxConnections.Text;
                 settingstemp.PrivateKey = AesOperation.EncryptString(key, textBoxPrivateKey.Text);
                 settingstemp.ConnectionString = AesOperation.EncryptString(key, textBoxConnections.Text);
-
-               
-                
-                if (!empty)
-                {
-                    transactionContext.Settings.Remove(settingstemp);
-                    transactionContext.SaveChanges();
-                }
+                settingstemp.ChainId = Int32.Parse(textBoxChainId.Text);
 
                 transactionContext.Settings.Add(settingstemp);
                 transactionContext.SaveChanges();
+                transactionContext.Entry(settingstemp).State = EntityState.Detached;
                 MessageBox.Show("Saved settings", "Configuration data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
@@ -107,14 +100,14 @@ namespace Airdrop
             settings.Contract = textBoxContract.Text;
             settings.PrivateKey = textBoxPrivateKey.Text;
             settings.ConnectionString = textBoxConnections.Text;
-
+            settings.ChainId = Int32.Parse(textBoxChainId.Text);
 
             if (string.IsNullOrEmpty(settings.ConnectionString))
             {
                 MessageBox.Show("Please fill your connnection string first", "Incomplete information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Connection test = new Connection(settings.ConnectionString, settings.PrivateKey, settings.Contract);
+            Connection test = new Connection(settings.ConnectionString, settings.PrivateKey, settings.Contract,settings.ChainId);
             string message;
             string tittle = "Testing parameters";
             decimal balance = await test.TBalance(settings.Address);
@@ -126,7 +119,7 @@ namespace Airdrop
             }
             else if (balance > 0)
             {
-                message = "successful connection";
+                message = $"successful connection, balance: {balance}";
                 MessageBox.Show(message, tittle, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
