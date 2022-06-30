@@ -74,7 +74,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+
             // 
             // textBoxChainId
             // 
@@ -82,7 +82,7 @@
             this.textBoxChainId.Name = "textBoxChainId";
             this.textBoxChainId.Size = new System.Drawing.Size(399, 23);
             this.textBoxChainId.TabIndex = 17;
-            this.textBoxChainId.TextChanged += new System.EventHandler(this.textBoxChainId_TextChanged);
+           
             // 
             // labelChainId
             // 
@@ -92,7 +92,7 @@
             this.labelChainId.Size = new System.Drawing.Size(51, 15);
             this.labelChainId.TabIndex = 16;
             this.labelChainId.Text = "Chain Id";
-            this.labelChainId.Click += new System.EventHandler(this.labelChainId_Click);
+         
             // 
             // textBoxAddress
             // 
@@ -100,7 +100,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(399, 23);
             this.textBoxAddress.TabIndex = 15;
-            this.textBoxAddress.TextChanged += new System.EventHandler(this.textBoxAddress_TextChanged);
+            
             // 
             // labelAddress
             // 
@@ -110,7 +110,7 @@
             this.labelAddress.Size = new System.Drawing.Size(49, 15);
             this.labelAddress.TabIndex = 14;
             this.labelAddress.Text = "Address";
-            this.labelAddress.Click += new System.EventHandler(this.labelAddress_Click);
+          
             // 
             // label1
             // 
@@ -120,7 +120,7 @@
             this.label1.Size = new System.Drawing.Size(69, 15);
             this.label1.TabIndex = 13;
             this.label1.Text = "Connection";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // textBoxConnections
             // 
@@ -129,7 +129,7 @@
             this.textBoxConnections.PasswordChar = '֎';
             this.textBoxConnections.Size = new System.Drawing.Size(399, 23);
             this.textBoxConnections.TabIndex = 12;
-            this.textBoxConnections.TextChanged += new System.EventHandler(this.textBoxConnections_TextChanged);
+           
             // 
             // buttonTest
             // 
@@ -173,7 +173,7 @@
             this.textBoxContract.Name = "textBoxContract";
             this.textBoxContract.Size = new System.Drawing.Size(399, 23);
             this.textBoxContract.TabIndex = 3;
-            this.textBoxContract.TextChanged += new System.EventHandler(this.textBoxContract_TextChanged);
+          
             // 
             // textBoxPrivateKey
             // 
@@ -182,7 +182,7 @@
             this.textBoxPrivateKey.PasswordChar = '֎';
             this.textBoxPrivateKey.Size = new System.Drawing.Size(399, 23);
             this.textBoxPrivateKey.TabIndex = 2;
-            this.textBoxPrivateKey.TextChanged += new System.EventHandler(this.textBoxPrivateKey_TextChanged);
+            
             // 
             // label3
             // 
@@ -192,7 +192,7 @@
             this.label3.Size = new System.Drawing.Size(85, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Token contract";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+       
             // 
             // label2
             // 
@@ -202,7 +202,7 @@
             this.label2.Size = new System.Drawing.Size(65, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Private Key";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+          
             // 
             // groupBoxDisclaimer
             // 
@@ -215,7 +215,7 @@
             this.groupBoxDisclaimer.TabIndex = 1;
             this.groupBoxDisclaimer.TabStop = false;
             this.groupBoxDisclaimer.Text = "Disclaimer";
-            this.groupBoxDisclaimer.Enter += new System.EventHandler(this.groupBoxDisclaimer_Enter);
+           
             // 
             // textBoxDisclaimer
             // 
@@ -230,7 +230,7 @@
             this.textBoxDisclaimer.Text = "Sensitive information is encripted, please use an unique wallet for the airdrop p" +
     "rocess and remove the remain funds after the airdrop process.";
             this.textBoxDisclaimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxDisclaimer.TextChanged += new System.EventHandler(this.textBoxDisclaimer_TextChanged);
+            
             // 
             // pictureBoxDisclaimer
             // 
@@ -241,7 +241,7 @@
             this.pictureBoxDisclaimer.Size = new System.Drawing.Size(67, 30);
             this.pictureBoxDisclaimer.TabIndex = 0;
             this.pictureBoxDisclaimer.TabStop = false;
-            this.pictureBoxDisclaimer.Click += new System.EventHandler(this.pictureBoxDisclaimer_Click);
+            
             // 
             // FormSettings
             // 

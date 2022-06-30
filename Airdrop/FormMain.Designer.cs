@@ -240,13 +240,14 @@
             // 
             // qtyDataGridViewTextBoxColumn
             // 
-            this.qtyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.qtyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.qtyDataGridViewTextBoxColumn.DataPropertyName = "Qty";
             this.qtyDataGridViewTextBoxColumn.FillWeight = 200F;
             this.qtyDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.qtyDataGridViewTextBoxColumn.Name = "qtyDataGridViewTextBoxColumn";
             this.qtyDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtyDataGridViewTextBoxColumn.Width = 200;
+            this.qtyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.qtyDataGridViewTextBoxColumn.Width = 78;
             // 
             // hashIdDataGridViewTextBoxColumn
             // 

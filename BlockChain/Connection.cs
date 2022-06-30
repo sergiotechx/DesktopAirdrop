@@ -1,9 +1,6 @@
 ﻿using Nethereum.Hex.HexConvertors.Extensions;
-using Nethereum.RPC.Eth.DTOs;
 using Nethereum.Web3;
 using Nethereum.Web3.Accounts;
-using System.Diagnostics;
-using System.Diagnostics.Contracts;
 using System.Numerics;
 
 namespace BlockChain
@@ -37,11 +34,9 @@ namespace BlockChain
 
         public async Task<decimal> TBalance(string account)
         {
-
             var function = contract.GetFunction("balanceOf");
             BigInteger balance = await function.CallAsync<BigInteger>(account);
             return Web3.Convert.FromWei(balance);
-
         }
 
         public async Task<Nethereum.Web3.Accounts.Account> AccountCreation()
@@ -52,32 +47,24 @@ namespace BlockChain
         }
         public async Task<Nethereum.RPC.Eth.DTOs.TransactionReceipt> SendNativeT(string toAddress, decimal amount)
         {
-            
-            var transaction = await web3.Eth.GetEtherTransferService()
-                .TransferEtherAndWaitForReceiptAsync(toAddress, amount);
-            
-            return transaction;
+         var transaction = await web3.Eth.GetEtherTransferService()
+               .TransferEtherAndWaitForReceiptAsync(toAddress, amount);
+         return transaction;
         }
         public async Task<string> SendT(string toAddress, decimal amount)
         {
-
-
             try
             {
                 var transferFunction = contract.GetFunction("transfer");
                 BigInteger amountToSend = Web3.Convert.ToWei(amount);
                 var gas = await transferFunction.EstimateGasAsync(account.Address, null, null, toAddress, amountToSend);
-
                 var transaction = await transferFunction.SendTransactionAndWaitForReceiptAsync(account.Address, gas, null, null, toAddress, amountToSend);
-
                 return transaction.TransactionHash;
             }
             catch (Exception ex)
             {
               throw new Exception(ex.Message);
             }
-            
         }
-
     }
 }

@@ -44,23 +44,18 @@ namespace Airdrop
             {
                 transactionContext.Entry(settings).State = EntityState.Detached;
                 textBoxAddress.Text = settings.Address;
-                textBoxPrivateKey.Text = AesOperation.DecryptString(key,settings.PrivateKey);
+                textBoxPrivateKey.Text = AesOperation.DecryptString(key, settings.PrivateKey);
                 textBoxContract.Text = settings.Contract;
                 textBoxChainId.Text = settings.ChainId.ToString();
                 textBoxConnections.Text = AesOperation.DecryptString(key, settings.ConnectionString);
-               
-               
             }
-           
-
-
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
             try
             {
-            
+
                 Settings settingstemp = transactionContext.Settings.FirstOrDefault<Settings>();
                 if (settingstemp == null)
                 {
@@ -72,7 +67,7 @@ namespace Airdrop
                     transactionContext.Settings.Remove(settingstemp);
                     transactionContext.SaveChanges();
                 }
-                             
+
                 settingstemp.Address = textBoxAddress.Text;
                 settingstemp.PrivateKey = textBoxPrivateKey.Text;
                 settingstemp.Contract = textBoxContract.Text;
@@ -107,7 +102,7 @@ namespace Airdrop
                 MessageBox.Show("Please fill your connnection string first", "Incomplete information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            Connection test = new Connection(settings.ConnectionString, settings.PrivateKey, settings.Contract,settings.ChainId);
+            Connection test = new Connection(settings.ConnectionString, settings.PrivateKey, settings.Contract, settings.ChainId);
             string message;
             string tittle = "Testing parameters";
             decimal balance = await test.TBalance(settings.Address);
@@ -122,76 +117,6 @@ namespace Airdrop
                 message = $"successful connection, balance: {balance}";
                 MessageBox.Show(message, tittle, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void textBoxChainId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelChainId_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelAddress_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxConnections_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxContract_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPrivateKey_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBoxDisclaimer_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxDisclaimer_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxDisclaimer_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
