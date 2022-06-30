@@ -24,7 +24,7 @@ namespace Airdrop
         TransactionContext transactionContext;
         List<Transaction> transactions = new List<Transaction>();
         CancellationTokenSource cancellationTokenSource = null;
-        bool allowed;
+
         string key = "PicaPicaPicachu!";
 
         public FormMain()
@@ -33,8 +33,6 @@ namespace Airdrop
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-
-            allowed = true;
             settings = new Settings();
             transactionContext = new TransactionContext();
             settings = transactionContext.Settings.FirstOrDefault<Settings>();
@@ -126,17 +124,15 @@ namespace Airdrop
 
         private async void toolStripButtonPlay_Click(object sender, EventArgs e)
         {
-            cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
             try
             {
+                cancellationTokenSource = new CancellationTokenSource();
+                var token = cancellationTokenSource.Token;
                 MakeAirdrop(token);
             }
             catch (OperationCanceledException ex)
             {
-
                 toolStripButtonPlay.Enabled = true;
-
             }
         }
         private void toolStripButtonStop_Click(object sender, EventArgs e)

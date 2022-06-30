@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSettings));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxChainId = new System.Windows.Forms.TextBox();
+            this.labelChainId = new System.Windows.Forms.Label();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.labelAddress = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.groupBoxDisclaimer = new System.Windows.Forms.GroupBox();
             this.textBoxDisclaimer = new System.Windows.Forms.TextBox();
             this.pictureBoxDisclaimer = new System.Windows.Forms.PictureBox();
-            this.labelChainId = new System.Windows.Forms.Label();
-            this.textBoxChainId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBoxDisclaimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisclaimer)).BeginInit();
@@ -74,6 +74,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
+
+            // 
+            // textBoxChainId
+            // 
+            this.textBoxChainId.Location = new System.Drawing.Point(101, 107);
+            this.textBoxChainId.Name = "textBoxChainId";
+            this.textBoxChainId.Size = new System.Drawing.Size(399, 23);
+            this.textBoxChainId.TabIndex = 17;
+           
+            // 
+            // labelChainId
+            // 
+            this.labelChainId.AutoSize = true;
+            this.labelChainId.Location = new System.Drawing.Point(7, 115);
+            this.labelChainId.Name = "labelChainId";
+            this.labelChainId.Size = new System.Drawing.Size(51, 15);
+            this.labelChainId.TabIndex = 16;
+            this.labelChainId.Text = "Chain Id";
+         
             // 
             // textBoxAddress
             // 
@@ -81,6 +100,7 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(399, 23);
             this.textBoxAddress.TabIndex = 15;
+            
             // 
             // labelAddress
             // 
@@ -90,6 +110,7 @@
             this.labelAddress.Size = new System.Drawing.Size(49, 15);
             this.labelAddress.TabIndex = 14;
             this.labelAddress.Text = "Address";
+          
             // 
             // label1
             // 
@@ -99,6 +120,7 @@
             this.label1.Size = new System.Drawing.Size(69, 15);
             this.label1.TabIndex = 13;
             this.label1.Text = "Connection";
+          
             // 
             // textBoxConnections
             // 
@@ -107,6 +129,7 @@
             this.textBoxConnections.PasswordChar = '֎';
             this.textBoxConnections.Size = new System.Drawing.Size(399, 23);
             this.textBoxConnections.TabIndex = 12;
+           
             // 
             // buttonTest
             // 
@@ -150,6 +173,7 @@
             this.textBoxContract.Name = "textBoxContract";
             this.textBoxContract.Size = new System.Drawing.Size(399, 23);
             this.textBoxContract.TabIndex = 3;
+          
             // 
             // textBoxPrivateKey
             // 
@@ -158,6 +182,7 @@
             this.textBoxPrivateKey.PasswordChar = '֎';
             this.textBoxPrivateKey.Size = new System.Drawing.Size(399, 23);
             this.textBoxPrivateKey.TabIndex = 2;
+            
             // 
             // label3
             // 
@@ -167,6 +192,7 @@
             this.label3.Size = new System.Drawing.Size(85, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Token contract";
+       
             // 
             // label2
             // 
@@ -176,6 +202,7 @@
             this.label2.Size = new System.Drawing.Size(65, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Private Key";
+          
             // 
             // groupBoxDisclaimer
             // 
@@ -188,6 +215,7 @@
             this.groupBoxDisclaimer.TabIndex = 1;
             this.groupBoxDisclaimer.TabStop = false;
             this.groupBoxDisclaimer.Text = "Disclaimer";
+           
             // 
             // textBoxDisclaimer
             // 
@@ -202,6 +230,7 @@
             this.textBoxDisclaimer.Text = "Sensitive information is encripted, please use an unique wallet for the airdrop p" +
     "rocess and remove the remain funds after the airdrop process.";
             this.textBoxDisclaimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            
             // 
             // pictureBoxDisclaimer
             // 
@@ -212,22 +241,7 @@
             this.pictureBoxDisclaimer.Size = new System.Drawing.Size(67, 30);
             this.pictureBoxDisclaimer.TabIndex = 0;
             this.pictureBoxDisclaimer.TabStop = false;
-            // 
-            // labelChainId
-            // 
-            this.labelChainId.AutoSize = true;
-            this.labelChainId.Location = new System.Drawing.Point(7, 115);
-            this.labelChainId.Name = "labelChainId";
-            this.labelChainId.Size = new System.Drawing.Size(51, 15);
-            this.labelChainId.TabIndex = 16;
-            this.labelChainId.Text = "Chain Id";
-            // 
-            // textBoxChainId
-            // 
-            this.textBoxChainId.Location = new System.Drawing.Point(101, 107);
-            this.textBoxChainId.Name = "textBoxChainId";
-            this.textBoxChainId.Size = new System.Drawing.Size(399, 23);
-            this.textBoxChainId.TabIndex = 17;
+            
             // 
             // FormSettings
             // 
